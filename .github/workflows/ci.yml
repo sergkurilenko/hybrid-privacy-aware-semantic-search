@@ -16,7 +16,7 @@ jobs:
       - name: Install test dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install numpy scipy scikit-learn pytest tenseal cryptography faiss-cpu
+          python -m pip install numpy scipy scikit-learn pytest tenseal cryptography faiss-cpu psutil
       - name: Run system tests
         run: python -m pytest tests -q
       - name: Syntax-check experiment and test modules
