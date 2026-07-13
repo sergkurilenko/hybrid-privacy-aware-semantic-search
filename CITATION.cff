@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the article below."
+title: "Hybrid privacy-aware semantic search: SVD-truncated document geometry and CKKS-encrypted query reranking under a restricted threat model"
+authors:
+  - family-names: Kurilenko
+    given-names: Sergey
+    affiliation: "Moscow Institute of Physics and Technology"
+version: 1.0.0
+date-released: 2026-07-14
+type: software
+license: MIT
+repository-code: "https://github.com/sergkurilenko/hybrid-privacy-aware-semantic-search"
+url: "https://arxiv.org/abs/2606.26373"
+doi: "10.48550/arXiv.2606.26373"
+identifiers:
+  - type: doi
+    value: "10.48550/arXiv.2606.26373"
+    description: "DOI for the arXiv article"
+  - type: url
+    value: "https://arxiv.org/abs/2606.26373"
+    description: "arXiv article record"
+abstract: >-
+  Reproducibility artifact for a leakage-aware hybrid semantic-search system
+  with a public SVD/PQ candidate index and block-packed CKKS query reranking.
+keywords:
+  - dense retrieval
+  - embedding privacy
+  - query confidentiality
+  - product quantization
+  - leakage evaluation
+  - homomorphic encryption
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Kurilenko
+      given-names: Sergey
+      affiliation: "Moscow Institute of Physics and Technology"
+  title: "Hybrid privacy-aware semantic search: SVD-truncated document geometry and CKKS-encrypted query reranking under a restricted threat model"
+  year: 2026
+  journal: "arXiv"
+  doi: "10.48550/arXiv.2606.26373"

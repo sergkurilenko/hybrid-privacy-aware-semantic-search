@@ -1,0 +1,62 @@
+# Measured environment lock for the journal revision
+
+Capture date: 2026-07-10/11 UTC
+
+Primary host:
+
+- Windows 11 build 26200, x86-64
+- Intel Core i5-14400F, 10 physical cores / 16 logical processors
+- 32 GB RAM
+- NVIDIA GeForce RTX 5060, 8,151 MiB reported by `nvidia-smi`
+- NVIDIA driver 591.86
+- CKKS evaluation: CPU only
+- E5 encoding and exact-reference retrieval: RTX 5060 / CUDA
+
+Primary interpreter:
+
+```text
+$CONDA_PREFIX\python.exe
+Python 3.11.15 (Anaconda, MSC v.1942, 64 bit)
+```
+
+Pinned direct packages:
+
+```text
+numpy 2.4.3
+scipy 1.17.1
+scikit-learn 1.8.0
+matplotlib 3.10.9
+pandas 3.0.2
+faiss-cpu 1.13.2
+tenseal 0.3.16 (Microsoft SEAL 4.1.1 backend)
+torch 2.10.0+cu128
+transformers 4.57.6
+datasets 4.8.5
+sentence-transformers 5.4.1
+psutil 7.2.2
+threadpoolctl 3.6.0
+pytest 8.4.2
+cryptography 49.0.0 (release-time disposable loopback TLS fixture generation)
+```
+
+The complete machine-readable capture is
+`results/system_revision/environment.json`. Systems-saturation records add
+per-run CPU affinity, process priority, thread-pool inspection, memory, and
+driver fields; no affinity or priority modification is performed.
+
+Independent security-estimator runtime:
+
+- isolated WSL2 distribution `CodexSageEstimatorUbuntu`
+- Ubuntu 22.04.5 LTS (Jammy)
+- Python 3.10.12
+- SageMath 9.5 (`sagemath`/`python3-sage` package 9.5-4)
+- malb/lattice-estimator commit
+  `3e48ef421ec256afddb3e7d2249a77eab6e9ba12`
+- Microsoft SEAL source-inspection commit
+  `206648d0e4634e5c61dcf9370676630268290b59`
+
+The WSL distribution is an execution environment, not part of the online
+resource. Generated Sage inputs, raw stdout/stderr, runtime metadata, file
+hashes, and parsed attack costs are archived instead. The same-CPU WSL
+TenSEAL point is a portability diagnostic and is labeled separately from the
+primary Windows measurements.

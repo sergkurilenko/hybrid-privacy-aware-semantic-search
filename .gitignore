@@ -1,0 +1,53 @@
+# Large generated data and model artifacts
+/data/
+/cache/
+/notebooks/
+*.npy
+*.npz
+*.pkl
+*.faiss
+*.index
+*.bak
+
+# Small, content-addressed projection bases used by the journal artifact are
+# intentionally versioned; million-row projected matrices remain ignored.
+!results/system_revision/cache/
+!results/system_revision/cache/*.npz
+!results/system_revision/cache/*.manifest.json
+
+# LaTeX build artifacts
+*.aux
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+/paper_revised/*.txt
+!/paper_revised/README_SUBMISSION.txt
+/submission/cover_letter.*
+/submission/*build*.txt
+
+# Python
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+*.ipynb
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Local orchestration and delivery staging
+/tmp/
+/output/
+
+# Generated or machine-setup-only security/system transcripts. Canonical Sage
+# inputs, estimator output, and measured result JSON remain versioned.
+/results/system_revision/security_expansion/lwe_security/*.sage.py
+/results/system_revision/security_expansion/lwe_security/*install_stdout.txt
+/results/system_revision/systems_expansion_smoke.json
